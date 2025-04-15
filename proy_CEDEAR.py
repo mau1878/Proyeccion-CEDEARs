@@ -21,7 +21,7 @@ st.title("Proyección del rendimiento de CEDEARs ajustados por inflación")
 @st.cache_data
 def load_cpi_data():
   try:
-      cpi = pd.read_csv('inflaciónargentina2.csv')
+      cpi = pd.read_csv('https://raw.githubusercontent.com/mau1878/Inflacion/refs/heads/main/inflaci%C3%B3nargentina2.csv')
       cpi['Date'] = pd.to_datetime(cpi['Date'], format='%d/%m/%Y')
       cpi.set_index('Date', inplace=True)
       # Asegurar que 'CPI_MoM' esté en formato decimal (ejemplo: 5% como 0.05)
